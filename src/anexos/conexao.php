@@ -11,8 +11,9 @@ if (session_status() !== PHP_SESSION_ACTIVE) { // p: qual a diferença entre PHP
 // Dados para conexão com o banco de dados
 $localhost = "localhost";
 $user = "root";
-$passw = "";
+$passw = "serra";
 $banco = "shelfshare";
+$port = 3306;
 
 global $pdo; // Variável global para ser usada em qualquer lugar do código
 
@@ -21,7 +22,7 @@ global $pdo; // Variável global para ser usada em qualquer lugar do código
 try{ 
     
     // Estrutura básica de conexão com o banco de dados
-    $pdo = new PDO(dsn: "mysql:dbname=".$banco."; host=".$localhost, username: $user,  password: $passw);
+    $pdo = new PDO("mysql:dbname=".$banco."; host=".$localhost."; port=".$port, $user, $passw);
     $pdo->exec("set names utf8");
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
