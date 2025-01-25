@@ -76,5 +76,18 @@ class Usuario{
             echo 'Erro: ' . $e->getMessage();
         }
     }
+    public function listarLivros($id_usuario){
+        global $pdo;
+        $array = array();
+        $sql = "SELECT * FROM livro WHERE id_usuario = :id_usuario";
+        $sql = $pdo->prepare($sql);
+        $sql->bindValue(":id_usuario", $id_usuario);
+        $sql->execute();
+
+        if($sql->rowCount() > 0){
+            $array = $sql->fetchAll();
+        }
+        return $array;
+    }
 }
 ?>

@@ -46,8 +46,8 @@
         <div class="row">
           <?php foreach ($resultado as $genero): ?>
             <div class="d-flex col-6 col-xl-3 mb-3 justify-content-center">
-              <a href="dados.php" class="card p-2 mb-2 border-primary border-2 bg-white text-decoration-none" style="width: 18rem;">
-                <img src="img/suspense_icon.png" class="card-img-top" alt="...">
+              <a href="generos.php?id_genero=<?php echo $genero['id_genero'] ?>" class="card p-2 mb-2 border-primary border-2 bg-white text-decoration-none" style="width: 18rem;">
+                <img src="img/gicon_<?php echo $genero['id_genero'] ?>.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h4 class="card-title text-center mb-0"><?php echo $genero['descricao'] ?></h4>
                 </div>

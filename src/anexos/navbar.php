@@ -16,7 +16,7 @@
                     <a class="nav-link text-light" href="cadastrarlivros.php">Novo Livro</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="notificacoes.php">Notificações</a>
+                    <a class="nav-link disabled text-light" href="notificacoes.php">Notificações</a>
                 </li>
             </ul>
             <form class="d-flex w-75" role="search" action="anexos/pesquisar.php" method="POST">

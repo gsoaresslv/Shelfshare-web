@@ -7,12 +7,17 @@
   </head>
   <body>
     <div class="page">
-        <?php require 'anexos/navbar.php'; ?>
+        <?php require 'anexos/navbar.php'; 
+        require_once 'anexos/Livro.class.php';
+        $id_genero = $_GET['id_genero'];
+        $livro = new Livro();
+        $resultado = $livro->porGenero($id_genero);
+        ;?>
 
         <!-- Cards de resultados -->
         <div class="container mt-4">
             <div class="row">
-                <?php foreach ($_SESSION['resultado'] as $livro): ?>
+                <?php foreach ($resultado as $livro): ?>
                     <div class="col-12 col-xxl-6 mb-3">
                         <div class="card border-primary h-100">
                             <div class="row g-0 h-100">

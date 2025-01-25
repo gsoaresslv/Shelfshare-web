@@ -38,5 +38,17 @@ class Livro{
             echo 'Erro: ' . $e->getMessage();
         }
     }
+
+    public function porGenero($id_genero): array{
+        global $pdo;
+            $sql = "SELECT * FROM `livro` WHERE `id_genero` = :id_genero AND `cidade` = :cidade ORDER BY `titulo` ASC LIMIT 20"; 
+            $sql = $pdo->prepare($sql);
+            $sql->bindValue(":id_genero", $id_genero, PDO::PARAM_INT);
+            $sql->bindValue(":cidade", $_SESSION['cidade'], PDO::PARAM_STR);
+            $sql->execute();
+
+            $resultado = $sql->fetchAll(PDO::FETCH_ASSOC); 
+            return $resultado;
+    }
 }
 ?>

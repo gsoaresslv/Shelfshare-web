@@ -11,7 +11,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) { // p: qual a diferença entre PHP
 // Dados para conexão com o banco de dados
 $localhost = "localhost";
 $user = "root";
-$passw = "serra";
+$passw = "";
 $banco = "shelfshare";
 $port = 3306;
 
