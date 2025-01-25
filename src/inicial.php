@@ -10,7 +10,7 @@
       <?php require 'anexos/navbar.php'; ?>
 
       <!-- Accordion de cidade -->
-      <div class="accordion m-4 mx-auto" style="max-width: 80rem;">
+      <div class="accordion m-4 mb-5 mx-auto" style="max-width: 67%;">
         <div class="accordion-item border-primary border-1 rounded">
           <h1 class="accordion-header">
             <button class="accordion-button bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -45,7 +45,7 @@
       <div class="container mt-4">
         <div class="row">
           <?php foreach ($resultado as $genero): ?>
-            <div class="d-flex col-12 col-xl-3 mb-3 justify-content-center">
+            <div class="d-flex col-6 col-xl-3 mb-3 justify-content-center">
               <a href="dados.php" class="card p-2 mb-2 border-primary border-2 bg-white text-decoration-none" style="width: 18rem;">
                 <img src="img/suspense_icon.png" class="card-img-top" alt="...">
                 <div class="card-body">
